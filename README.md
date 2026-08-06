@@ -1,4 +1,4 @@
-# L.E.M - Low Earth Mesh
+# L.E.M - Low Earth Mesh 🛰️
 
 Custom Meshtastic firmware and build/flash guide for the **L.E.M SAO** (Shitty Add-On), a LoRa Meshtastic node.
 
