@@ -7,6 +7,8 @@ Custom Meshtastic firmware and build/flash guide for the **L.E.M SAO** (Shitty A
 
 > **Why a custom build instead of the web flasher**: the LoRa pins are baked into `variant.h` at compile time and aren't configurable from the app. No pre-built target matches this discrete C3 + E22 wiring.
 
+![Version 1 L.E.M](./assets/img01.jpg)
+
 ## Repository structure
 
 ```
@@ -169,7 +171,7 @@ BLE pairing PIN: since the board has no screen, it defaults to FIXED_PIN (defaul
 | Flash stuck on `Connecting....____` | auto-reset unreliable over native USB | BOOT + RST + release BOOT, retry |
 | No serial log (board is alive) | console on UART0 | `-D ARDUINO_USB_MODE=1` + `-D ARDUINO_USB_CDC_ON_BOOT=1` |
 | No BLE | board not booting (strapping) or WiFi init | fix the GPIO9 strapping issue, `WIFI_DISABLED=1` |
-| Board dead, download mode only | GPIO9 strapping pin held low by an external signal | cut the trace and reroute to a non-strapping pin |
+| Board dead, download mode only | GPIO9 strapping pin held low by an external signal | cut the trace and reroute to a non-strapping pin (V1 only) |
 | `ClearCommError` / reconnect loop | pyserial + C3 USB-JTAG bug on Windows | Microsoft's Serial Monitor extension |
 | Monitor drops on RST | RST also resets native USB | don't press RST while monitoring |
 | COM port changes after reflash | firmware creates its own CDC device | recheck the port number |
