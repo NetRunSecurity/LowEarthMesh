@@ -1,0 +1,19 @@
+# PlatformIO / Meshtastic build artifacts (if firmware is cloned alongside this repo)
+.pio/
+.pioenvs/
+.piolibdeps/
+firmware/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.bin
+*.elf
+*.map
+
+# Local secrets (BLE PINs, WiFi creds, etc.)
+userPrefs.jsonc
