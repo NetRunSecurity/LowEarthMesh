@@ -1,8 +1,7 @@
-# PlatformIO / Meshtastic build artifacts (if firmware is cloned alongside this repo)
+# PlatformIO build artifacts
 .pio/
 .pioenvs/
 .piolibdeps/
-firmware/
 
 # Editor / OS
 .vscode/
